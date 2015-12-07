@@ -33,7 +33,6 @@ public class MainActivity extends FragmentActivity {
 
         ButterKnife.inject(this);
 
-
         final TabLayout.TabLayoutOnPageChangeListener listener = new TabLayout.TabLayoutOnPageChangeListener(mTabLayout);
         mViewPager.addOnPageChangeListener(listener);
 
