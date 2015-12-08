@@ -27,4 +27,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:5.1.1'
     compile project(':appframewok')
     compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.github.magiepooh:recycler-itemdecoration:1.1.1@aar'
 }

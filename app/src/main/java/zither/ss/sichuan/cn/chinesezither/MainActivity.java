@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import zither.ss.sichuan.cn.chinesezither.v.BasicKnowledgeFragment;
+import zither.ss.sichuan.cn.chinesezither.v.CzAboutUsFragment;
 import zither.ss.sichuan.cn.chinesezither.v.CzBaseFragment;
 import zither.ss.sichuan.cn.chinesezither.v.CzStoryFragment;
 import zither.ss.sichuan.cn.chinesezither.v.CzTitleViewPagerAdapter;
@@ -48,6 +49,9 @@ public class MainActivity extends FragmentActivity {
                     break;
                 case 4:
                     fragments.add(new CzStoryFragment());
+                    break;
+                case 5:
+                    fragments.add(new CzAboutUsFragment());
                     break;
                 default:
                     fragments.add(new SampleFragment());
