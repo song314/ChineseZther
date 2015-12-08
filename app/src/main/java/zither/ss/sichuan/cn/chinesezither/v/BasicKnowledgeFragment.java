@@ -2,9 +2,7 @@ package zither.ss.sichuan.cn.chinesezither.v;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -28,10 +26,9 @@ public class BasicKnowledgeFragment extends CzBaseFragment {
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.layout_basic_knowledge, container, false);
+    protected int setLayoutRes() {
+        return R.layout.layout_basic_knowledge;
     }
 
     @Override

@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import zither.ss.sichuan.cn.chinesezither.v.BasicKnowledgeFragment;
+import zither.ss.sichuan.cn.chinesezither.v.CzAboutUsFragment;
 import zither.ss.sichuan.cn.chinesezither.v.CzBaseFragment;
+import zither.ss.sichuan.cn.chinesezither.v.CzStoryFragment;
 import zither.ss.sichuan.cn.chinesezither.v.CzTitleViewPagerAdapter;
 import zither.ss.sichuan.cn.chinesezither.v.SampleFragment;
 
@@ -33,7 +35,6 @@ public class MainActivity extends FragmentActivity {
 
         ButterKnife.inject(this);
 
-
         final TabLayout.TabLayoutOnPageChangeListener listener = new TabLayout.TabLayoutOnPageChangeListener(mTabLayout);
         mViewPager.addOnPageChangeListener(listener);
 
@@ -41,11 +42,22 @@ public class MainActivity extends FragmentActivity {
         ArrayList<CzBaseFragment> fragments = new ArrayList<>();
 
         for (int i = 0; i < mTitle.length; i++) {
-            if (i == 1) {
-                fragments.add(new BasicKnowledgeFragment());
-            } else {
-                fragments.add(new SampleFragment());
+
+            switch (i) {
+                case 1:
+                    fragments.add(new BasicKnowledgeFragment());
+                    break;
+                case 4:
+                    fragments.add(new CzStoryFragment());
+                    break;
+                case 5:
+                    fragments.add(new CzAboutUsFragment());
+                    break;
+                default:
+                    fragments.add(new SampleFragment());
+                    break;
             }
+
         }
 
         mAdapter = new CzTitleViewPagerAdapter(getSupportFragmentManager(), fragments, mTitle);
